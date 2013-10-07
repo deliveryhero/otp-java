@@ -1,0 +1,18 @@
+License: http://www.apache.org/licenses/LICENSE-2.0.txt
+
+Apache License, Version 2.0
+
+Parts of the work are derived/rewritten from the aerogear-otp project. 
+
+I have rewritten a lot of the parts completely. The API is nearly equal to the original one.
+
+I have added further OTP implementations and unit tests, which were not accepted by the original project itself.
+
+That's why I have decided to rewrite and publish it.
+
+
+Implementations:
+- Totp is now a real TOTP (in aerogear it is a google compatible TOTP)
+- GTotp is the original implementation created in the aerogear project (was refactored majorly)
+- Motp is compatible with Apps like iOTP and supports MOTPs (google for motp or http://motp.sourceforge.net)
+	- no work was derived from source forge 

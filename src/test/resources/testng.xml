@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Authentication Tests">
+	<test name="all">
+		<classes>
+			<class name="de.devsurf.security.otp.api.MotpTest" />
+			<class name="de.devsurf.security.otp.api.TotpTest" />
+			<class name="de.devsurf.security.otp.api.GTotpTest" />
+		</classes>
+	</test>
+</suite>
