@@ -4,7 +4,7 @@
 	<groupId>de.devsurf.security</groupId>
 	<artifactId>otp</artifactId>
 	<packaging>jar</packaging>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<licenses>
 		<license>
 			<name>The Apache Software License, Version 2.0</name>
