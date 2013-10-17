@@ -40,26 +40,28 @@ public class ClockTest {
     @InjectMocks
     private Clock clock = new Clock();
 
-
     @Before
-    public void setUp() throws Exception {
-        MockitoAnnotations.initMocks(this);
-        Calendar gregorianCalendar = GregorianCalendar.getInstance(TimeZone.getTimeZone("UTC"));
-        gregorianCalendar.set(2012, Calendar.DECEMBER, 21, 0, 0, 0);
-        when(calendar.getTimeInMillis()).thenReturn(gregorianCalendar.getTimeInMillis());
+    public void setUp()
+        throws Exception {
+        MockitoAnnotations.initMocks( this );
+        Calendar gregorianCalendar = GregorianCalendar.getInstance( TimeZone.getTimeZone( "UTC" ) );
+        gregorianCalendar.set( 2012, Calendar.DECEMBER, 21, 0, 0, 0 );
+        when( calendar.getTimeInMillis() ).thenReturn( gregorianCalendar.getTimeInMillis() );
     }
 
     @Test
-    public void testGetCurrentInterval() throws Exception {
+    public void testGetCurrentInterval()
+        throws Exception {
         final long interval = 45201600L;
-        assertEquals(interval, clock.getCurrentInterval());
+        assertEquals( interval, clock.getCurrentInterval() );
     }
-    
-    public static void main(String[] args) throws Exception {
-    	Clock c = new Clock();
-		while(true){
-			System.out.println(c.getCurrentInterval());
-			Thread.sleep(1000);
-		}
-	}
+
+    public static void main( String[] args )
+        throws Exception {
+        Clock c = new Clock();
+        while ( true ) {
+            System.out.println( c.getCurrentInterval() );
+            Thread.sleep( 1000 );
+        }
+    }
 }

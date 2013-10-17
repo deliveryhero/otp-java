@@ -21,7 +21,6 @@ import java.nio.ByteBuffer;
 
 import org.junit.Test;
 
-
 import de.devsurf.security.otp.api.Clock;
 import de.devsurf.security.otp.api.Hash;
 import de.devsurf.security.otp.api.internal.Base32;
@@ -31,9 +30,10 @@ import static junit.framework.Assert.assertEquals;
 
 public class HmacTest {
     @Test
-    public void testDigest() throws Exception {
-    	byte[] challenge = ByteBuffer.allocate(8).putLong(new Clock().getCurrentInterval()).array();
-        byte[] hash = new Hmac(Hash.SHA1, Base32.decode(Base32.random())).digest(challenge);
-        assertEquals(20, hash.length);
+    public void testDigest()
+        throws Exception {
+        byte[] challenge = ByteBuffer.allocate( 8 ).putLong( new Clock().getCurrentInterval() ).array();
+        byte[] hash = new Hmac( Hash.SHA1, Base32.decode( Base32.random() ) ).digest( challenge );
+        assertEquals( 20, hash.length );
     }
 }

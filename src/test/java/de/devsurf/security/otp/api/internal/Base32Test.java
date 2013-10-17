@@ -21,18 +21,19 @@ import org.junit.Test;
 
 import de.devsurf.security.otp.api.internal.Base32;
 
-
 import static org.junit.Assert.assertEquals;
 
 public class Base32Test {
 
     @Test
-    public void testRandom() throws Exception {
-        assertEquals(16, Base32.random().length());
+    public void testRandom()
+        throws Exception {
+        assertEquals( 16, Base32.random().length() );
     }
 
     @Test
-    public void testDecode() throws Exception {
-        assertEquals(10, Base32.decode(Base32.random()).length);
+    public void testDecode()
+        throws Exception {
+        assertEquals( 10, Base32.decode( Base32.random() ).length );
     }
 }
