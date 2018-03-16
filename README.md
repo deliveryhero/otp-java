@@ -1,5 +1,5 @@
 
-# OTP library for Java
+# OTP library for Java [![Build Status](https://travis-ci.org/deliveryhero/rps-otp-java.svg?branch=master)](https://travis-ci.org/deliveryhero/rps-otp-java)
 
 This is a fork of the [original repository](https://github.com/manzke/otp-java) from Daniel Manzke, which
 has been used in production environments already.
