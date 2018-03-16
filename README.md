@@ -11,4 +11,4 @@ available on maven central, we simply forked it to publish artifacts to our inte
 `java-otp` supports TOTP, MOTP and GTOTP and allows customization regarding hash algorithms and
 tolerance intervals.
 
-You can also take a look at the original (README) with thoughts of the origin developer.
+The original [README] has been left intact.
