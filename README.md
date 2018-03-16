@@ -42,5 +42,8 @@ String eightDigitTotp = totp.now();
 This will create a TOTP with 8 digits using a 60 seconds interval with no tolerance using
 the given secret and SHA256 as hash algorithm. 
 
-*Note:* Be aware that the password length has to be 20, 32, or 64 characters long depending on the chosen
-hash algorithm (SHA1, SHA256, SHA512).
+Using a tolerance > 0 means, that given an interval of 30 seconds, the OTP would still be valid
+after 30 seconds have passed until reaching 61 seconds.
+
+*Note:* Be aware that the password length has to be exactly 20, 32, or 64 characters long depending on
+the chosen hash algorithm (SHA1, SHA256, SHA512).
