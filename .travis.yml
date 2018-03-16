@@ -1,0 +1,15 @@
+sudo: required
+language: java
+jdk:
+- oraclejdk8
+cache:
+  directories:
+  - "$HOME/.m2/repository"
+install:
+- pip install --user awscli
+- aws s3 cp s3://9cookies-travis/travis-maven-settings.xml /home/travis/tools/travis-maven-settings.xml
+script:
+- mvn clean install --settings=/home/travis/tools/travis-maven-settings.xml
+after_success:
+- aws s3 cp s3://9cookies-travis/tools/mvn-deploy.tgz /home/travis/tools/ && tar xvf /home/travis/tools/mvn-deploy.tgz -C /home/travis/tools/
+- bash /home/travis/tools/mvn-deploy.sh /home/travis/tools/travis-maven-settings.xml
